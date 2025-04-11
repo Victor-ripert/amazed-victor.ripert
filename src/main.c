@@ -6,16 +6,24 @@
 */
 
 #include "tree.h"
+#include "lib.h"
+#include "parsing.h"
 #include <stdlib.h>
 
 #include <stdio.h>
 
-int main(void)
+int main(int const argc, char const *const argv[])
 {
     tree_t *head = NULL;
     size_t result = 0;
     tree_t **tab = NULL;
 
+    if (amazed(argc, argv, &head) == EPITECH_ERROR)
+        return EPITECH_ERROR;
+    if (head == NULL)
+        mini_printf("Flop\n");
+    else
+        mini_printf("Yesss\n");
     add_to_list("1", 0, 0, &head);
     head->node_type = START;
     add_to_list("2", 0, 0, &head);
