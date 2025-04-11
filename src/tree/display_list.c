@@ -6,7 +6,6 @@
 */
 
 #include "tree.h"
-#include "my_str.h"
 #include <stddef.h>
 #include <stdio.h>
 
