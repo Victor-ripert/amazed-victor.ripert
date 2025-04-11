@@ -45,5 +45,9 @@ ssize_t child_array_len(tree_t *node);
 size_t child_append(tree_t *node1, tree_t *node2);
 size_t connect_link(char *room1, char *room2, tree_t **head);
 tree_t *search_node(tree_t **head, node_type_t node_type);
+void display_list(tree_t *head);
+int find_path(tree_t *new_graph);
+size_t free_tree_array(tree_t **array);
+ssize_t tree_array_append(tree_t ***connected_room, tree_t *node2);
 
 #endif /* TREE_H */

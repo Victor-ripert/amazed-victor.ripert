@@ -22,6 +22,13 @@ int main(void)
     add_to_list("6", 0, 0, &head);
     add_to_list("7", 0, 0, &head);
     add_to_list("9", 0, 0, &head);
-    head->node_type = START;
+    connect_link("1", "4", &head);
+    connect_link("4", "5", &head);
+    connect_link("5", "9", &head);
+    connect_link("9", "2", &head);
+    connect_link("2", "7", &head);
+    connect_link("7", "6", &head);
+    connect_link("6", "3", &head);
+    find_path(head);
     return EPITECH_SUCCESS;
 }

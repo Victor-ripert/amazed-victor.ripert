@@ -8,10 +8,9 @@
 #include "tree.h"
 #include <stdlib.h>
 #include <stdbool.h>
-
 #include <stdio.h>
 
-size_t child_create(tree_t *node1, tree_t *node2,
+static size_t child_create(tree_t *node1, tree_t *node2,
     size_t array_size, tree_t **new_childs_array)
 {
     new_childs_array[array_size] = node2;
@@ -20,7 +19,7 @@ size_t child_create(tree_t *node1, tree_t *node2,
     return EPITECH_SUCCESS;
 }
 
-bool find_node_presence(tree_t *node1, tree_t *node2)
+static bool find_node_presence(tree_t *node1, tree_t *node2)
 {
     for (size_t i = 0; node1->connected_room[i] != NULL; i++) {
         if (node1->connected_room[i] == node2)

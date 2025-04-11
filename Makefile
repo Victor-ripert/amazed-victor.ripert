@@ -5,15 +5,19 @@
 ## make
 ##
 
-SRC =	src/str/my_strlen.c	\
-	src/str/my_strcmp.c	\
-	src/str/my_strdup.c	\
-	src/tree/search_in_list.c	\
-	src/tree/child_array_len.c	\
-	src/tree/child_append.c	\
-	src/tree/connect_link.c	\
-	src/tree/search_node.c	\
-	src/tree/add_to_list.c	\
+SRC =	src/str/my_strlen.c			\
+	src/str/my_strcmp.c				\
+	src/str/my_strdup.c				\
+	src/tree/search_in_list.c		\
+	src/tree/child_array_len.c		\
+	src/tree/child_append.c			\
+	src/tree/connect_link.c			\
+	src/tree/search_node.c			\
+	src/tree/add_to_list.c			\
+	src/tree/algo.c 				\
+	src/tree/display_list.c 		\
+	src/tree/free_tree_array.c	\
+	src/tree/tree_array_append.c
 
 NAME	=	amazed
 
