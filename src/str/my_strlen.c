@@ -5,7 +5,7 @@
 ** return length of a str
 */
 
-#include "tree.h"
+#include "my_str.h"
 #include <stddef.h>
 
 ssize_t my_strlen(char const *str)
