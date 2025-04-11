@@ -5,21 +5,28 @@
 ## make
 ##
 
-SRC =	src/str/my_strlen.c	\
-	src/str/my_strcmp.c	\
-	src/str/my_strdup.c	\
-	src/str/my_putchar.c	\
-	src/str/my_putstr.c	\
-	src/tree/search_in_list.c	\
-	src/tree/child_array_len.c	\
-	src/tree/child_append.c	\
-	src/tree/connect_link.c	\
-	src/tree/search_node.c	\
-	src/tree/add_to_list.c	\
-	src/tree/display_list.c	\
-	src/tree/free_tree_array.c	\
-	src/algo.c	\
-	src/tree_array_append.c
+SRC =	$(addprefix src/,	\
+	tree/search_in_list.c	\
+	tree/child_array_len.c	\
+	tree/child_append.c	\
+	tree/connect_link.c	\
+	tree/search_node.c	\
+	tree/add_to_list.c	\
+	tree/display_list.c	\
+	tree/free_tree_array.c	\
+	algo.c	\
+	tree_array_append.c	\
+	parsing/amazed.c	\
+	parsing/checking_error_bin.c	\
+	parsing/parse_maze.c	\
+	parsing/parse_line.c	\
+	parsing/parse_command.c	\
+	parsing/parse_robots.c	\
+	parsing/is_room_line.c	\
+	parsing/parse_room.c	\
+	parsing/is_tunnel_line.c	\
+	parsing/parse_tunnel.c	\
+)
 
 NAME	=	amazed
 
@@ -40,16 +47,19 @@ CPPFLAGS += -ggdb3 $(INC) -Wall -Wextra
 all:		$(NAME)
 
 $(NAME):	$(OBJ) $(MAIN)
-	$(CC) -o $(NAME) $(MAIN) $(OBJ)
+	make -C ./lib
+	$(CC) $(OBJ) -L./lib -lmy -o $(NAME) $(MAIN)
 
 debug: fclean $(OBJ)
 	$(CC) -o $(NAME) $(MAIN) $(OBJ) $(DEBUG_VALGRIND)
 
 clean:
 	@$(RM) $(OBJ) $(MAIN)
+	make clean -C ./lib
 
 fclean:	clean
 	@$(RM) $(NAME)
+	make fclean -C ./lib
 
 re:	fclean  all
 
