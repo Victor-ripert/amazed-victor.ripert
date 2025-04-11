@@ -5,7 +5,7 @@
 ** desc
 */
 #include <stdio.h>
-#include "tree.h"
+#include "my_str.h"
 
 int my_strcmp(char *str_1, char *str_2)
 {

@@ -6,6 +6,7 @@
 */
 
 #include "tree.h"
+#include "my_str.h"
 #include <stdlib.h>
 
 tree_t *search_in_list(char *room, tree_t **head)
