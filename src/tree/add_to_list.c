@@ -6,7 +6,7 @@
 */
 
 #include "tree.h"
-#include "my_str.h"
+#include "lib.h"
 #include <stdlib.h>
 
 ssize_t add_to_list(char *room_name, int pos_x, int pos_y, tree_t **head)

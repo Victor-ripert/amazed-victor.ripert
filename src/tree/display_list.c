@@ -5,6 +5,7 @@
 ** display_list.c
 */
 
+#include "lib.h"
 #include "tree.h"
 #include <stddef.h>
 #include <stdio.h>
