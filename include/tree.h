@@ -34,10 +34,11 @@ typedef struct tree_s {
     node_type_t node_type;
 } tree_t;
 
-//STR
-ssize_t my_strlen(char const *str);
-int my_strcmp(char *str_1, char *str_2);
-char *my_strdup(char *str);
+// //STR
+// ssize_t my_strlen(char const *str);
+// int my_strcmp(char *str_1, char *str_2);
+// char *my_strdup(char *str);
+// void my_putchar(char c);
 
 ssize_t add_to_list(char *room_name, int pos_x, int pos_y, tree_t **head);
 tree_t *search_in_list(char *room, tree_t **head);
@@ -46,8 +47,9 @@ size_t child_append(tree_t *node1, tree_t *node2);
 size_t connect_link(char *room1, char *room2, tree_t **head);
 tree_t *search_node(tree_t **head, node_type_t node_type);
 void display_list(tree_t *head);
-int find_path(tree_t *new_graph);
-size_t free_tree_array(tree_t **array);
+
 ssize_t tree_array_append(tree_t ***connected_room, tree_t *node2);
+size_t algo(tree_t **head, tree_t ***tab);
+void free_tree_array(tree_t **array);
 
 #endif /* TREE_H */

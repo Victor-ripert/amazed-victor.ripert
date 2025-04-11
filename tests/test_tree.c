@@ -7,6 +7,7 @@
 #include <criterion/criterion.h>
 #include <criterion/redirect.h>
 #include "tree.h"
+#include "my_str.h"
 #include <stdio.h>
 
 void redirect_all_std(void)

@@ -14,7 +14,9 @@ void display_child(tree_t *node)
     if (node == NULL || node->connected_room == NULL)
         return;
     for (size_t i = 0; node->connected_room[i] != NULL; i++) {
-        dprintf(1, "└──%s\n", node->connected_room[i]->name);
+        my_putstr("└──");
+        my_putstr(node->connected_room[i]->name);
+        my_putstr("\n");
     }
 }
 
@@ -26,7 +28,8 @@ void display_list(tree_t *head)
         return;
     tmp = head;
     while (tmp != NULL) {
-        dprintf(1, "%s\n", tmp->name);
+        my_putstr(tmp->name);
+        my_putstr("\n");
         display_child(tmp);
         tmp = tmp->next;
     }

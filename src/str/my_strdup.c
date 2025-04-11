@@ -6,7 +6,7 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
-#include "tree.h"
+#include "my_str.h"
 
 char *my_strdup(char *str)
 {
